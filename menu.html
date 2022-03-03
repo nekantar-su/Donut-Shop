@@ -1,0 +1,250 @@
+<!--index.html-Nicholas Kantarellis-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikes Donuts</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="menu.css" />
+</head>
+
+<body>
+    <header>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm"
+            style="background-color: #800000;">
+            <h5 class="my-0 mr-md-auto page-header text-light"><b><i>MIKE'S DONUTS</i></b></h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-light" href="indexx.html">Home</a>
+                <a class="p-2 text-light active" href="menu.html">Menu</a>
+            </nav>
+            <button class="open-button" onclick="openForm()">Login/Sign Up</button>
+            <div class="form-popup" id="myForm">
+                <form class="form-container" id="loginForm">
+                    <h1>Login</h1>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" id="login_email" name="email" required>
+
+                    <label for="passsword"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="login_password" name="password" required>
+
+                    <button type="submit" class="btn">Login</button>
+                    <button type="button" class="btnn" onclick="opensignup()">Sign up Form</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+
+            <div class="reg-popup" id="reg">
+                <form class="form-container" id="registerForm">
+                    <h1>Register</h1>
+
+                    <label for="email"><b>Email</b></label>
+
+                    <input type="text" placeholder="Enter Email" id="id_email" name="email" required>
+
+                    <label for="password"><b>Password</b></label>
+
+                    <input type="password" placeholder="Enter Password" id="id_password" name="password" required>
+
+                    <label for="passwordconfirm"><b>Password</b></label>
+
+                    <input type="password" placeholder="Re enter Password" id="passwordConfirm" name="passwordConfirm"
+                        required>
+
+                    <button class="btn" onclick="openForm()">Login</button>
+                    <button type="submit" class="btnn">Sign Up</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Marketing messaging and featurettes
+      ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing bg-light">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4" style="margin-top: 50px;">
+                    <img src="Donut-Pics/boxdonut.jpg" alt="donut" width="200" height="200" style="margin-left:70px;">
+                    <h2>Donuts</h2>
+                    <p>From 1976 all baking has been done on the premise from Mike himself. Come try our variety of
+                        delicious donuts from Boston Creme to our delicious French Crullers. Click below to find out
+                        more.</p>
+                    <p style="text-align: center"><a class="btn btn-secondary" href="#don" role="button">View details
+                            »</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="Donut-Pics/cofg.png" alt="Coffee">
+                    <h2>Coffee/Tea</h2>
+                    <p>Come get your freshly brewwed coffee or tea here at Mikes for only $1.50! We also have Iced
+                        Coffee/Tea, Expressos and more!Click to view our
+                        flavors.</p>
+                    <p style="text-align: center;"><a class="btn btn-secondary" href="#tea" role="button">View details
+                            »</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="Donut-Pics/bage.png" alt="bagel">
+                    <h2>Bagels/Muffins</h2>
+                    <p>Not feeling a sweet? No problem! Try one of our delicious homemade muffins or bagels! Everything
+                        is freshly baked daily!Click to
+                        find out more!</p>
+                    <p style="text-align: center"><a class="btn btn-secondary" href="#Muf" role="button">View details
+                            »</a></p>
+                </div>
+            </div>
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading" id="don"> <b><u>Donuts</u></b> </h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p style="text-align: center;">Regular Donuts($1 each)</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">Chocolate/Vanilla Glazed</li>
+                                <li class="list-group-item">Classic Glazed</li>
+                                <li class="list-group-item">Boston Creme/Jelly Filled</li>
+                                <li class="list-group-item">Plain/Marble Crullers</li>
+                                <li class="list-group-item">Apple Filled</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-md-6">
+                            <p style="text-align: center;">Special Donuts($1.75 each)</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">French Crullers</li>
+                                <li class="list-group-item">Bowties</li>
+                                <li class="list-group-item">Pom Poms</li>
+                                <li class="list-group-item">Cinnamon Bun</li>
+                                <li class="list-group-item">Seasonal Donuts</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <img src="Donut-Pics/storefront.jpg" alt="don" height="400" width="450">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading" id="tea"><b><u>Coffee/Tea</u></b></h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Hot Coffee</li>
+                                <li class="list-group-item">Iced Coffee</li>
+                                <li class="list-group-item">Expresso</li>
+                                <li class="list-group-item">Cappacino</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Hot Tea</li>
+                                <li class="list-group-item">Iced Tea</li>
+                                <li class="list-group-item">Flavored Teas (Mint,Chammomile)</li>
+                            </ul>
+                        </div>
+                        <p style="text-align: center;margin-top: 20px;">Coffee and Tea share the same price here at
+                            Mike's with a small hot coffee/tea being $1.50 and a large being $2.00.</p>
+                    </div>
+
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="Donut-Pics/teag.png" alt="tea" height="350" width="450">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading" id="Muf"><b><u>Muffins/Bagels</u></b></h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Corn Muffin</li>
+                                <li class="list-group-item">Blueberry Muffin</li>
+                                <li class="list-group-item">Rasin Muffin</li>
+                                <li class="list-group-item">Chocolate Chip Muffin</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Bagel Creme Cheese</li>
+                                <li class="list-group-item">Bagel Butter</li>
+                                <li class="list-group-item">Bagel Jelly</li>
+                                <li class="list-group-item">Bagel American Cheese</li>
+                            </ul>
+                        </div>
+                        <p style="text-align: center;margin-top: 20px;">Muffins and Bagels like our donuts are also made
+                            in store. Muffins are priced at $2.00 a piece while a bagel varries on spread. A bagel with
+                            creme cheese is $1.75,butter $1.50, and jelly $1.00.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <img src="Donut-Pics/tino.jpg" alt="tino" height="400" width="450">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#Top">
+                        <img src="Donut-Pics/gifdon.gif" alt="donut" style="width:100px;height:100px;border:0;">
+                    </a></li>
+
+            </ul>
+            <p class="mb-1">&copy; 1976-2020 Mikes Donuts</p>
+        </footer>
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyASJBB7CdACJxdHhz1k_7Kuu-F-colyqlA",
+            authDomain: "sketchbook-c2298.firebaseapp.com",
+            databaseURL: "https://sketchbook-c2298.firebaseio.com",
+            projectId: "sketchbook-c2298",
+            storageBucket: "sketchbook-c2298.appspot.com",
+            messagingSenderId: "745971111191",
+            appId: "1:745971111191:web:68bc56b8900a40962cd352",
+            measurementId: "G-X56P0EJSBY"
+        };
+    </script>
+    <script src="login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!--index.html-Nicholas Kantarellis-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikes Donuts</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="indexx.css" />
+
+</head>
+
+<body class="bg-light">
+    <header id=#Top>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm"
+            style="background-color: #800000;">
+            <h5 class="my-0 mr-md-auto page-header text-light"><b><i>MIKE'S DONUTS</i></b></h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-light" href="indexx.html">Home</a>
+                <a class="p-2 text-light" href="menu.html">Menu</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div class="container"style="border:1px solid #cecece;">
+        <div class="py-5 text-center">
+            <h2><u>Mike's Checkout Form</u></h2>
+            <p class="font-italic font-weight-light">Serving Brooklyn for over 43 years</p>
+        </div>
+        <!---------------------Cart----------------------------->
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4  position-fixed" style="width:300px; right: 180px;">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your cart</span>
+                    <span class="badge badge-secondary badge-pill" id="titems"></span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Donuts</h6>
+                            <small class="text-muted" id="ndon"></small>
+                        </div>
+                        <span class="text-muted" id="pdon"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Coffee</h6>
+                            <small class="text-muted" id="ncof"></small>
+                        </div>
+                        <span class="text-muted" id="pcof"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Bagels</h6>
+                            <small class="text-muted" id="nbagel"></small>
+                        </div>
+                        <span class="text-muted" id="pbagel"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div>
+                            <h6 class="my-0">Muffins</h6>
+                            <small class="text-muted" id="nmuf"></small>
+                        </div>
+                        <span class="text-muted" id="pmuf"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong id="tpricee"></strong>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                            <form class="needs-validation" id="orderform">
+                            <button class="btn btn-danger btn-lg btn-block" type="submit">Place Order</button>
+                        </li>
+      
+                </ul>
+            </div>
+            <div class="col-md-8 order-md-1">
+                <hr class="featurette-divider">
+                <h4 style="text-align: center;"><u>Donuts</u></h4>
+                
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-3">
+                            <p style="text-align: center">Here at Mike's, we do orders by bakers dozen. Order a dozen
+                                and get a donut free!1 dozen is only $9!</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="ddon">Amount of Donuts:</label>
+                            <input type="number" class="form-control" id="ddon" name="ddon" placeholder="" value=""
+                                style="width:126px;" oninput="donuts()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <img src="/Donut-Pics/donb.png" width="120"height="120">
+                        </div>
+                    </div>
+                    <hr class="featurette-divider">
+                    <h4 style="text-align: center;"><u>Coffee</u></h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-3">
+                            <p style="text-align: center">Here at Mike's, we do orders by Boxes of Joe. Order a box of
+                                Joe for $16!</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="bjoe">Boxes of Joe:</label>
+                            <input type="number" class="form-control" id="bjoe" name="bjoe" placeholder="" value=""
+                                style="width:126px;" oninput="coffee()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <img src='/Donut-Pics/cofb.png' width="120" height="120">
+                        </div>
+                    </div>
+                    <hr class="featurette-divider">
+                    <h4 style="text-align: center"><u>Bagels</u></h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3">
+                            <p style="text-align: center">Here at Mike's, we do orders by individual Bagels and spread
+                                type.</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="bagell">Bagels</label>
+                            <select class="custom-select d-block w-100" id="bag" name="bagell">
+                                <option value="">Choose...</option>
+                                <option>Plain</option>
+                                <option>Seaseme Seed</option>
+                                <option>Everything</option>
+                                <option>Cinnamon Rasin</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="spreadd">Spread</label>
+                            <select class="custom-select d-block w-100" id="bspreads" name="spreadd">
+                                <option value="">Choose...</option>
+                                <option>Creme Cheese</option>
+                                <option>Butter</option>
+                                <option>Jelly</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="bagel">Amount:</label>
+                            <input type="number" class="form-control" id="bagel" name="bagel" placeholder="" value=""
+                                style="width:126px;" oninput="bage()">
+                        </div>
+
+                    </div>
+                    <hr class="featurette-divider">
+                    <h4 style="text-align:center;"><u>Muffins</u></h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3">
+                            <p style="text-align: center">Here at Mike's, we do orders by individual Muffins and spread
+                                type.</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="mufin">Muffins</label>
+                            <select class="custom-select d-block w-100" id="mspread" name="mufin">
+                                <option value="">Choose...</option>
+                                <option>Corn</option>
+                                <option>Blueberry</option>
+                                <option>Rasinbran</option>
+                                <option>Cinnamon Rasin</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="spread">Spread</label>
+                            <select class="custom-select d-block w-100" id="mspreads" name="spread">
+                                <option value="">Choose...</option>
+                                <option>Creme Cheese</option>
+                                <option>Butter</option>
+                                <option>Jelly</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="muf">Amount:</label>
+                            <input type="number" class="form-control" id="muf" name="muf" placeholder="" value=""
+                                style="width:126px;" oninput="muffin()">
+                        </div>
+
+                    </div>
+                    <hr class="featurette-divider">
+                </form>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#Top">
+                        <img src="Donut-Pics/gifdon.gif" alt="donut" style="width:100px;height:100px;border:0;">
+                    </a></li>
+            </ul>
+            <p class="mb-1">&copy; 1976-2020 Mikes Donuts</p>
+        </footer>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                 https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyASJBB7CdACJxdHhz1k_7Kuu-F-colyqlA",
+            authDomain: "sketchbook-c2298.firebaseapp.com",
+            databaseURL: "https://sketchbook-c2298.firebaseio.com",
+            projectId: "sketchbook-c2298",
+            storageBucket: "sketchbook-c2298.appspot.com",
+            messagingSenderId: "745971111191",
+            appId: "1:745971111191:web:68bc56b8900a40962cd352",
+            measurementId: "G-X56P0EJSBY"
+        };
+    </script>
+    <script src='order.js'></script>
+</body>
+
+</html>
